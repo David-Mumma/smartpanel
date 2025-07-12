@@ -1,0 +1,68 @@
+
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SmartPanel – Landskap</title>
+  <style>
+    body {
+      margin: 0;
+      display: flex;
+      flex-direction: row;
+      height: 100vh;
+      background-color: #111;
+      color: white;
+      font-family: sans-serif;
+    }
+    .left, .right {
+      height: 100%;
+    }
+    .left {
+      flex: 2;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      padding: 4px;
+    }
+    .section {
+      flex: 1;
+      background-color: #1a1a1a;
+      margin-bottom: 4px;
+    }
+    .right {
+      flex: 1;
+      background-color: #000;
+    }
+    iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Left side: Hue, Sonos, Bitcoin, Clock -->
+  <div class="left">
+    <div class="section">
+      <iframe src="https://my.hueessentials.com"></iframe>
+    </div>
+    <div class="section">
+      <iframe src="https://sonos-web.herokuapp.com"></iframe>
+    </div>
+    <div class="section">
+      <iframe src="https://widgets.coingecko.com/coingecko-coin-price-marquee-widget.html?coin_ids=bitcoin&currency=sek"></iframe>
+    </div>
+    <div class="section">
+      <iframe src="https://free.timeanddate.com/clock/i8jef50u/n239/tlse/fn6/fs28/fcfff/tct/pct/ftb/th2"></iframe>
+    </div>
+  </div>
+
+  <!-- Right side: FindWind (mobile view, tall iframe) -->
+  <div class="right">
+    <iframe src="https://findwind.se"></iframe>
+  </div>
+
+</body>
+</html>
