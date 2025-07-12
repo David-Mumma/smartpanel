@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SmartPanel</title>
+  <style>
+    body {
+      margin: 0;
+      background: #111;
+      font-family: sans-serif;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+    }
+    iframe {
+      border: none;
+      width: 100%;
+    }
+    .section {
+      flex: 1;
+      margin: 2px 0;
+    }
+    .small {
+      flex: 0.2;
+    }
+    .medium {
+      flex: 0.5;
+    }
+    .large {
+      flex: 1.5;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- A: FindWind (stor karta) -->
+  <div class="section large">
+    <iframe src="https://findwind.se" height="100%"></iframe>
+  </div>
+
+  <!-- B: Philips Hue Webapp -->
+  <div class="section medium">
+    <iframe src="https://my.hueessentials.com" height="100%"></iframe>
+  </div>
+
+  <!-- C: Sonos Controller -->
+  <div class="section medium">
+    <iframe src="https://sonos-web.herokuapp.com" height="100%"></iframe>
+  </div>
+
+  <!-- D: Bitcoin-ticker -->
+  <div class="section small">
+    <iframe src="https://widgets.coingecko.com/coingecko-coin-price-marquee-widget.html?coin_ids=bitcoin&currency=sek" height="100%"></iframe>
+  </div>
+
+  <!-- E: Klocka -->
+  <div class="section small">
+    <iframe src="https://free.timeanddate.com/clock/i8jef50u/n239/tlse/fn6/fs36/fcfff/tct/pct/ftb/th2" height="100%"></iframe>
+  </div>
+
+</body>
+</html>
